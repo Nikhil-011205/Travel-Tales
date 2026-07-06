@@ -57,7 +57,7 @@ app.post("/login", async (req, res) => {
 
     },
 
-    "mySecretKey",
+    process.env.JWT_SECRET,
 
     {
 
@@ -127,7 +127,7 @@ app.post("/add-trip", async (req, res) => {
         const token = req.headers.authorization;
 
         // Verify the token
-        const decoded = jwt.verify(token, "mySecretKey");
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         // Get logged-in user's ID
         const userId = decoded.id;
@@ -176,7 +176,7 @@ app.get("/my-trips", async (req, res) => {
         const token = req.headers.authorization;
 
         // Verify JWT
-        const decoded = jwt.verify(token, "mySecretKey");
+        const decoded = jwt.verify(token,process.env.JWT_SECRET);
 
         // Logged-in user's ID
         const userId = decoded.id;
@@ -216,7 +216,7 @@ app.delete("/delete-trip/:id", async (req, res) => {
 
         const token = req.headers.authorization;
 
-        const decoded = jwt.verify(token, "mySecretKey");
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         const userId = decoded.id;
 
@@ -248,7 +248,7 @@ app.post("/bucketlist", async (req, res) => {
 
         const token = req.headers.authorization;
 
-        const decoded = jwt.verify(token, "mySecretKey");
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         const userId = decoded.id;
 
@@ -282,7 +282,7 @@ app.get("/bucketlist", async (req, res) => {
 
         const token = req.headers.authorization;
 
-        const decoded = jwt.verify(token, "mySecretKey");
+        const decoded = jwt.verify(token,process.env.JWT_SECRET);
 
         const userId = decoded.id;
 
@@ -316,7 +316,7 @@ app.delete("/bucketlist/:id", async (req, res) => {
 
         const token = req.headers.authorization;
 
-        const decoded = jwt.verify(token, "mySecretKey");
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         const userId = decoded.id;
 
@@ -348,7 +348,7 @@ app.get("/dashboard", async (req, res) => {
 
         const token = req.headers.authorization;
 
-        const decoded = jwt.verify(token, "mySecretKey");
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         const userId = decoded.id;
 
@@ -427,6 +427,8 @@ app.get("/dashboard", async (req, res) => {
 
 });
 
-app.listen(5000, () => {
-    console.log("Server Started on Port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server Started on Port ${PORT}`);
 });

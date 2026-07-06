@@ -14,12 +14,23 @@ function Register(){
 
     async function handleRegister() {
 
-    const response = await fetch("http://localhost:5000/register", {
+    if (password !== confirmPassword) {
+
+        alert("Passwords do not match!");
+
+        return;
+
+    }
+
+    // Register User
+    const registerResponse = await fetch("http://localhost:5000/register", {
 
         method: "POST",
 
         headers: {
+
             "Content-Type": "application/json"
+
         },
 
         body: JSON.stringify({
@@ -32,26 +43,45 @@ function Register(){
 
     });
 
-    const data = await response.text();
+    const registerData = await registerResponse.text();
 
-    console.log(data);
+    if (registerData !== "User Registered Successfully") {
 
-    if(data === "User Registered Successfully"){
+        alert(registerData);
 
-        alert("Registration Successful!");
-
-        navigate("/login");
+        return;
 
     }
-    else{
 
-        alert("Registration Failed");
+    // Automatically Login
+    const loginResponse = await fetch("http://localhost:5000/login", {
 
-    }
+        method: "POST",
+
+        headers: {
+
+            "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify({
+
+            email,
+            password
+
+        })
+
+    });
+
+    const loginData = await loginResponse.json();
+
+    localStorage.setItem("token", loginData.token);
+
+    alert("Registration Successful!");
+
+    navigate("/profile");
 
 }
-
-    
 
     
     return(
@@ -98,7 +128,7 @@ function Register(){
             <br />
             <br />
             <input type="password" placeholder="Confirm password" value={confirmPassword} onChange={(event)=>{
-                setconfirmPassword(event.target.value);
+                setConfirmPassword(event.target.value);
             }} 
             />
             <br />
