@@ -18,7 +18,7 @@ function BucketList() {
 
     const token = localStorage.getItem("token");
 
-    const response = await fetch("http://localhost:5000/bucketlist", {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/bucketlist`, {
 
       headers: {
 
@@ -40,7 +40,7 @@ function BucketList() {
 
     const token = localStorage.getItem("token");
 
-    const response = await fetch("http://localhost:5000/bucketlist", {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/bucketlist`, {
 
       method: "POST",
 
@@ -83,7 +83,7 @@ function BucketList() {
 
     const response = await fetch(
 
-      `http://localhost:5000/bucketlist/${id}`,
+      `${import.meta.env.VITE_BACKEND_URL}/bucketlist/${id}`,
 
       {
 

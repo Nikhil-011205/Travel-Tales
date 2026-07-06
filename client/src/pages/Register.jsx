@@ -23,7 +23,7 @@ function Register(){
     }
 
     // Register User
-    const registerResponse = await fetch("http://localhost:5000/register", {
+    const registerResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/register`, {
 
         method: "POST",
 
@@ -54,7 +54,7 @@ function Register(){
     }
 
     // Automatically Login
-    const loginResponse = await fetch("http://localhost:5000/login", {
+    const loginResponse = await fetch(`${import.meta.env.VITE_BACKEND_URL}/login`, {
 
         method: "POST",
 

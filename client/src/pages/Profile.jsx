@@ -25,7 +25,7 @@ useEffect(() => {
 
         const token = localStorage.getItem("token");
 
-        const response = await fetch("http://localhost:5000/dashboard", {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/dashboard`, {
 
             headers: {
 

@@ -10,7 +10,7 @@ function MyTrips() {
 
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5000/my-trips", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/my-trips`, {
 
         headers: {
 
@@ -46,7 +46,7 @@ async function deleteTrip(id) {
 
         const response = await fetch(
 
-            `http://localhost:5000/delete-trip/${id}`,
+            `${import.meta.env.VITE_BACKEND_URL}/delete-trip/${id}`,
 
             {
 

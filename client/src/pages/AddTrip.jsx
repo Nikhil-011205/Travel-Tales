@@ -50,7 +50,7 @@ function AddTrip() {
         console.log(imageUrl);
 
 
-        const response = await fetch("http://localhost:5000/add-trip", {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/add-trip`, {
 
             method: "POST",
 
