@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.hero {
+  background-image: url("../assets/beach.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: whitesmoke;
+}
