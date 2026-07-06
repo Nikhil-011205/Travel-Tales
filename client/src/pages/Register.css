@@ -1,17 +1,27 @@
 .register-container{
-    height:100vh;
+
+    min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     background-image:url("../assets/beach.jpg");
+
     background-size:cover;
+
     background-position:center;
+
+    padding:20px;
 }
 
 .register-card{
 
     width:400px;
+
+    max-width:100%;
 
     padding:40px;
 
@@ -31,14 +41,18 @@
     color:white;
 
     margin-bottom:10px;
-}
 
+    font-size:32px;
+}
 
 .text-description{
+
     color:#f1f5f9;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
 }
-
-
 
 .register-card input{
 
@@ -73,7 +87,9 @@
 
     cursor:pointer;
 
-    margin-bottom: 20px;
+    margin-bottom:20px;
+
+    transition:0.3s;
 }
 
 .register-card button:hover{
@@ -81,18 +97,101 @@
     background:#0ea5e9;
 }
 
-.login-text {
-  margin-top: 20px;
-  color: black;
-  font-size: 16px;
+.login-text{
+
+    margin-top:20px;
+
+    color:black;
+
+    font-size:16px;
 }
 
-.login-link {
-  color: #090e11;
-  text-decoration: none;
-  font-weight: bold;
+.login-link{
+
+    color:#090e11;
+
+    text-decoration:none;
+
+    font-weight:bold;
 }
 
-.login-link:hover {
-  text-decoration: underline;
+.login-link:hover{
+
+    text-decoration:underline;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+    .register-card{
+
+        width:90%;
+
+        padding:35px;
+
+    }
+
+    .register-card h1{
+
+        font-size:28px;
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+    .register-container{
+
+        padding:15px;
+
+    }
+
+    .register-card{
+
+        width:100%;
+
+        padding:25px;
+
+        border-radius:15px;
+
+    }
+
+    .register-card h1{
+
+        font-size:24px;
+
+    }
+
+    .text-description{
+
+        font-size:14px;
+
+    }
+
+    .register-card input{
+
+        padding:13px;
+
+        font-size:15px;
+
+    }
+
+    .register-card button{
+
+        padding:13px;
+
+        font-size:16px;
+
+    }
+
+    .login-text{
+
+        font-size:14px;
+
+    }
+
 }

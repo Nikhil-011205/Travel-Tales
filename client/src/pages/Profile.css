@@ -25,13 +25,16 @@ body{
     background-position:center;
 
     background-repeat:no-repeat;
+
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .profile-card{
 
     width:900px;
 
-    height:fit-content;
+    max-width:100%;
 
     background:rgba(255,255,255,0.18);
 
@@ -68,6 +71,8 @@ body{
     margin-bottom:35px;
 
     font-style:italic;
+
+    line-height:1.6;
 }
 
 .profile-info{
@@ -178,4 +183,123 @@ body{
     color:#0f172a;
 
     font-size:36px;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+    .profile-card{
+
+        padding:30px;
+
+    }
+
+    .profile-card h1{
+
+        font-size:34px;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+    }
+
+    .info-card{
+
+        width:100%;
+        max-width:320px;
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+    .profile-container{
+
+        padding-top:170px;
+
+        padding-left:15px;
+
+        padding-right:15px;
+    }
+
+    .profile-card{
+
+        padding:20px;
+
+        border-radius:15px;
+
+    }
+
+    .profile-card h1{
+
+        font-size:28px;
+
+    }
+
+    .quote{
+
+        font-size:15px;
+
+    }
+
+    .info-card{
+
+        width:100%;
+
+        padding:20px;
+    }
+
+    .info-card h2{
+
+        font-size:34px;
+    }
+
+    .info-card h3{
+
+        font-size:20px;
+    }
+
+    .info-card p{
+
+        font-size:16px;
+    }
+
+    .stats-heading{
+
+        font-size:24px;
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+    .stat-card{
+
+        padding:22px;
+    }
+
+    .stat-card h2{
+
+        font-size:34px;
+    }
+
+    .stat-card h3{
+
+        font-size:18px;
+    }
+
+    .stat-card h1{
+
+        font-size:30px;
+    }
+
 }

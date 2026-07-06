@@ -25,11 +25,16 @@ body{
     background-position:center;
 
     background-repeat:no-repeat;
+
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .addtrip-card{
 
     width:650px;
+
+    max-width:100%;
 
     background:rgba(255,255,255,0.18);
 
@@ -51,6 +56,8 @@ body{
     text-align:center;
 
     margin-bottom:10px;
+
+    font-size:36px;
 }
 
 .subtitle{
@@ -62,6 +69,8 @@ body{
     margin-bottom:35px;
 
     font-size:18px;
+
+    line-height:1.6;
 }
 
 .addtrip-card label{
@@ -97,7 +106,7 @@ body{
 
     resize:none;
 
-    height:140px;
+    min-height:140px;
 }
 
 .addtrip-card input[type="file"]{
@@ -133,4 +142,97 @@ body{
 .addtrip-card button:hover{
 
     background:#0284c7;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+    .addtrip-card{
+
+        width:90%;
+
+        padding:30px;
+
+    }
+
+    .addtrip-card h1{
+
+        font-size:30px;
+
+    }
+
+    .subtitle{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+    .addtrip-container{
+
+        padding-top:170px;
+
+        padding-left:15px;
+
+        padding-right:15px;
+
+    }
+
+    .addtrip-card{
+
+        width:100%;
+
+        padding:22px;
+
+        border-radius:15px;
+
+    }
+
+    .addtrip-card h1{
+
+        font-size:26px;
+
+    }
+
+    .subtitle{
+
+        font-size:15px;
+
+    }
+
+    .addtrip-card label{
+
+        font-size:15px;
+
+    }
+
+    .addtrip-card input,
+    .addtrip-card textarea{
+
+        padding:13px;
+
+        font-size:15px;
+
+    }
+
+    .addtrip-card textarea{
+
+        min-height:120px;
+
+    }
+
+    .addtrip-card button{
+
+        padding:13px;
+
+        font-size:16px;
+
+    }
+
 }

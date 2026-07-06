@@ -56,3 +56,75 @@
 
     color:#38bdf8;
 }
+
+/* -------- Tablet -------- */
+
+@media (max-width:768px){
+
+    .dashboard-navbar{
+
+        padding:18px 25px;
+
+    }
+
+    .dashboard-logo{
+
+        font-size:24px;
+
+    }
+
+    .dashboard-links{
+
+        gap:20px;
+
+    }
+
+    .dashboard-links a{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* -------- Mobile -------- */
+
+@media (max-width:480px){
+
+    .dashboard-navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:15px;
+
+    }
+
+    .dashboard-logo{
+
+        font-size:26px;
+
+        text-align:center;
+
+    }
+
+    .dashboard-links{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+    .dashboard-links a{
+
+        font-size:16px;
+
+    }
+
+}

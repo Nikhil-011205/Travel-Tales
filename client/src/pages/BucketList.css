@@ -21,11 +21,16 @@
     display:flex;
 
     justify-content:center;
+
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .bucket-card{
 
     width:1000px;
+
+    max-width:100%;
 
     background:rgba(255,255,255,0.18);
 
@@ -54,6 +59,10 @@
     text-align:center;
 
     margin:15px 0 35px;
+
+    font-size:18px;
+
+    line-height:1.6;
 }
 
 .input-section{
@@ -178,4 +187,128 @@
     text-align:center;
 
     grid-column:1/-1;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:768px){
+
+    .bucket-container{
+
+        padding:120px 20px 40px;
+
+    }
+
+    .bucket-card{
+
+        padding:30px;
+
+    }
+
+    .bucket-card h1{
+
+        font-size:34px;
+
+    }
+
+    .subtitle{
+
+        font-size:16px;
+
+    }
+
+    .input-section{
+
+        flex-direction:column;
+
+    }
+
+    .input-section button{
+
+        width:100%;
+
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:480px){
+
+    .bucket-container{
+
+        padding:170px 15px 30px;
+
+    }
+
+    .bucket-card{
+
+        padding:20px;
+
+        border-radius:15px;
+
+    }
+
+    .bucket-card h1{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:15px;
+
+    }
+
+    .input-section{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .input-section input{
+
+        padding:13px;
+
+        font-size:15px;
+
+    }
+
+    .input-section button{
+
+        width:100%;
+
+        padding:13px;
+
+        font-size:15px;
+
+    }
+
+    .destination-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .destination-card{
+
+        padding:20px;
+
+    }
+
+    .destination-card h2{
+
+        font-size:22px;
+
+    }
+
+    .destination-card p{
+
+        font-size:15px;
+
+    }
+
 }

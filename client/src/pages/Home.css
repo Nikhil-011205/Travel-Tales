@@ -4,19 +4,6 @@ body {
 }
 
 .hero {
-  text-align: center;
-  margin-top: 0px;
-}
-
-.hero h1 {
-  font-size: 50px;
-}
-
-.hero p {
-  font-size: 20px;
-}
-
-.hero {
   background-image: url("../assets/beach.jpg");
   background-size: cover;
   background-position: center;
@@ -31,4 +18,54 @@ body {
 
   text-align: center;
   color: whitesmoke;
+
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 0 15px;
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 100%;
+    line-height: 1.5;
+  }
+
 }
